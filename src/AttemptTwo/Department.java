@@ -9,6 +9,7 @@ public class Department {
     private String email;
 
     private List<Student> students;
+    private Employee[] employees = new Employee[5];
 
     public Department(String name, int deptCode, String email, Institute institute) {
         this.name = name;
@@ -63,5 +64,13 @@ public class Department {
 
     public List<Student> getStudents() {
         return students;
+    }
+
+    public Employee[] getEmployees() {
+        return employees;
+    }
+
+    public void setEmployees(Employee[] employees) {
+        this.employees = employees;
     }
 }

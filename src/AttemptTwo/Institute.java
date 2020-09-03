@@ -10,6 +10,7 @@ public class Institute {
     private String phoneNr;
 
     private List<Department> departments;
+    private List<Employee> employees;
 
     
     public Institute(String name, String address, String email, String phoneNr) {
@@ -29,6 +30,17 @@ public class Institute {
         }
         System.out.println("New department added");
         departments.add(department);
+        return true;
+    }
+    public boolean newEmployee(Employee employee){
+        for (Employee e : employees){
+            if(employee.equals(e)){
+                System.out.println("Already in system");
+                return false;
+            }
+        }
+        System.out.println("New employee added");
+        employees.add(employee);
         return true;
     }
 
